@@ -89,7 +89,7 @@ client.on("message", message => { //ツMHMODS'$'ᵀᴹ#0001
 
   if(message.content.toLowerCase().includes("giveaway")) { //ツMHMODS'$'ᵀᴹ#0001 
 
-    if(message.author.id == "526702104849678340" || message.author.id == "553212598368337921") { //ツMHMODS'$'ᵀᴹ#0001 
+    if(message.author.id == "526702104849678340" || message.author.id == "294882584201003009") { //ツMHMODS'$'ᵀᴹ#0001 
 
       message.react("🎉") //ツMHMODS'$'ᵀᴹ#0001 
 
