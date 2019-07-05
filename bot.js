@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
+const prefix = ('+') 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -66,6 +66,18 @@ if (message.content.startsWith(adminprefix + 'vip avatar')) {
 
 
 
+ 
+client.on('message', message => {
+    if (message.content.toLowerCase().startsWith(prefix+"top-servers")) {
+        const top = client.guilds.sort((a, b) => a.memberCount - b.memberCount).array().reverse()
+     let tl = "";
+      for (let i=0;i<=25;i++) {
+          if (!top[i]) continue;
+         tl += i+" - "+top[i].name+" : "+top[i].memberCount+"\n"
+      }
+      message.channel.send(tl)
+    }
+});
 
 
 client.login('mfa.O7Uw9TCdr0mqM3UP1B3iF-mmo_M4Vx3u5b-Gj9WSnVuPCpQsv0RYsxPv39hERYeThk5XPop_aY2HJS1zG6vL');
