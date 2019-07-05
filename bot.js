@@ -80,4 +80,25 @@ client.on('message', message => {
 });
 
 
+
+
+
+
+
+client.on("message", message => { //ツMHMODS'$'ᵀᴹ#0001 
+
+  if(message.content.toLowerCase().includes("giveaway")) { //ツMHMODS'$'ᵀᴹ#0001 
+
+    if(message.author.id == "526702104849678340" || message.author.id == "553212598368337921") { //ツMHMODS'$'ᵀᴹ#0001 
+
+      message.react("🎉") //ツMHMODS'$'ᵀᴹ#0001 
+
+    } //ツMHMODS'$'ᵀᴹ#0001 
+
+  } //ツMHMODS'$'ᵀᴹ#0001 
+
+}) //ツMHMODS'$'ᵀᴹ#0001 
+
+
+
 client.login('mfa.O7Uw9TCdr0mqM3UP1B3iF-mmo_M4Vx3u5b-Gj9WSnVuPCpQsv0RYsxPv39hERYeThk5XPop_aY2HJS1zG6vL');
