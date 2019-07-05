@@ -101,4 +101,92 @@ client.on("message", message => { //ツMHMODS'$'ᵀᴹ#0001
 
 
 
+
+
+client.on('message', message => { 
+    const mm = message.mentions.members.first() || message.member;
+    if(message.content.startsWith(prefix + "avatar")){
+        const embed = new Discord.RichEmbed()
+        .setAuthor(mm.user.tag, mm.user.avatarURL)
+        .setTitle("Avatar Link")
+        .setURL(mm.user.avatarURL)
+        .setImage(mm.user.avatarURL)
+        .setFooter(`Requested By : ${message.author.tag}`, message.author.avatarURL)
+        message.channel.send(embed);
+    }
+});
+
+
+
+
+
+
+
+client.on('message', message => {
+
+  const aa = message.content.split(" ").slice(1).join(" ");
+
+  if(message.content.startsWith(prefix + "skin")){
+
+    if(!aa) return message.reply(`❌  -  **${prefix}skin <name>**`);
+
+    var ss = new Discord.RichEmbed()
+
+    .setTitle(`${aa}'s Skin!`)
+
+    .setURL(`https://minotar.net/armor/body/${aa}/100.png`)
+
+    .setThumbnail(`https://minotar.net/avatar/${aa}`)
+
+    .setImage(`https://minotar.net/armor/body/${aa}/100.png`)
+
+    .setFooter(`Requested By : ${message.author.tag}`, message.author.avatarURL)
+
+    message.channel.send(ss);
+
+  }
+
+});
+
+
+
+
+
+
+
+client.on('message', message => {
+
+  if(message.content === prefix + "user"){
+
+    var embed = new Discord.RichEmbed()
+
+    .setTitle(message.author.tag, message.author.avatarURL)
+
+    .addField(`User`, message.author.username)
+
+    .addField(`Discrim`,`#`+ message.author.discriminator)
+
+    .addField(`Name Color Role`, message.member.colorRole)
+
+    .addField(`Game`,message.author.presence.game ||"Idle.")
+
+    .addField(`Status`,message.author.presence.status)
+
+    message.channel.send(embed);
+
+  }
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
 client.login('mfa.O7Uw9TCdr0mqM3UP1B3iF-mmo_M4Vx3u5b-Gj9WSnVuPCpQsv0RYsxPv39hERYeThk5XPop_aY2HJS1zG6vL');
